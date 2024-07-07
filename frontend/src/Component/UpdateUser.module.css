@@ -1,0 +1,122 @@
+/* UpdateUser.module.css */
+
+/* Global Variables */
+:root {
+  --primary-color: #673ab7;
+  --primary-hover: #5e35b1;
+  --text-color: #333333;
+  --border-color: #dddddd;
+  --background-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --focus-color: #673ab7;
+  --transition-speed: 0.3s;
+}
+
+/* Container Styles */
+.updateUserContainer {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.updateUserContainer h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Form Styles */
+.updateUserForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.updateUserForm input {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color var(--transition-speed) ease;
+}
+
+.updateUserForm input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(103, 58, 183, 0.1);
+}
+
+.updateUserForm input[type="password"] {
+  letter-spacing: 0.3em;
+}
+
+/* Button Group Styles */
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Button Styles */
+.updateButton,
+.cancelButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+}
+
+.updateButton {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+}
+
+.updateButton:hover,
+.updateButton:focus {
+  background-color: var(--primary-hover);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cancelButton {
+  background-color: #ff6347; /* New background color */
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.cancelButton:hover,
+.cancelButton:focus {
+  background-color: #42d16b;
+  border-color: #999999;
+}
+
+/* Focus Styles */
+.updateButton:focus,
+.cancelButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(103, 58, 183, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .updateUserContainer {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .updateButton,
+  .cancelButton {
+    width: 100%;
+  }
+}
